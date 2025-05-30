@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website - About</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b0b0b;
+            color: #736e10;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        
+        nav {
+            background-color: #34495e;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            display: inline-block;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1abc9c;
+        }
+        
+        .active {
+            background-color: #1abc9c;
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+        
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .profile-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1e293b;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .profile-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .skills {
+            margin-top: 40px;
+        }
+        
+        .skills h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e293b;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .skill-bars {
+            margin-top: 20px;
+        }
+        
+        .skill {
+            margin-bottom: 20px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            color: #1e293b;
+        }
+        
+        .skill-bar {
+            height: 12px;
+            background-color: #cbd5e1;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: #1abc9c;
+            border-radius: 6px;
+        }
+        
+        .education {
+            margin-top: 40px;
+        }
+        
+        .education h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e293b;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .education-item {
+            margin-bottom: 25px;
+            background-color: #cbd5e1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .education-item h3 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .education-item p {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="profile">
+            <div class="profile-image">
+                <img src="images/myself.jpg" alt="Mohsin Reza Malik Profile Photo">
+            </div>
+            
+            <div class="profile-info">
+                <h2>Who I Am</h2>
+                <p>
+                    I'm Mohsin Reza Malik, a web developer and designer with over 5 years of experience creating digital solutions for clients across various industries. I specialize in front-end development, responsive design, and creating intuitive user experiences.
+                </p>
+                <p>
+                    My journey in web development began during my college years when I discovered my passion for coding and design. Since then, I've worked with startups, agencies, and established companies to bring their digital visions to life.
+                </p>
+                <p>
+                    What sets me apart is my holistic approach to web development. I believe that great websites are not just visually appealing but also functional, accessible, and optimized for performance.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy photography, hiking, and exploring new cuisines. These creative outlets inspire my work and keep me grounded in the physical world.
+                </p>
+            </div>
+        </section>
+        
+        <section class="skills">
+            <h2>My Skills</h2>
+            <div class="skill-bars">
+                <div class="skill">
+                    <div class="skill-name">HTML/CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-name">React</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-name">UI/UX Design</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-name">Photography</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education">
+            <h2>Education & Certifications</h2>
+            
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>Sharif University of Technology, 2021-2025.Focus on web technologies and human-computer interaction</p>
+                
+            </div>
+            
+            <div class="education-item">
+                <h3>Frontend Development Certification</h3>
+                <p>Web Development Institute, 2023.Advanced coursework in modern JavaScript frameworks and responsive design</p>
+                
+            </div>
+            
+            <div class="education-item">
+                <h3>UX Design Professional Certificate</h3>
+                <p>Design Academy Online, 2024.Comprehensive training in user research, wireframing, and prototyping</p>
+                
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Mohsin Reza Malik. All rights reserved.</p>
+    </footer>
+</body>
+</html>
